@@ -3,29 +3,29 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package bubblesort;
+package insertionsort;
 
 /**
  *
  * @author HP
  */
-public class BubbleSort {
+public class InsertionSort {
 
     void sort(int arr[]) {
+        for (int i = 0; i < arr.length; i++) {
+            int key = arr[i];
+            int j = i - 1;
 
-        for (int i = 0; i < arr.length - 1; i++) {
-            for (int j = 0; j < (arr.length - i - 1); j++) {
-                if (arr[j] > arr[j + 1]) {
-                    int temp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = temp;
-
-                }
+            while (j >= 0 && arr[j] > key) {
+                arr[j + 1] = arr[j];
+                j = j - 1;
             }
+            arr[j + 1] = key;
         }
+
     }
 
-    void print(int arr[]) {
+    void display(int arr[]) {
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
             System.out.println();
@@ -33,11 +33,11 @@ public class BubbleSort {
     }
 
     public static void main(String[] args) {
-        BubbleSort B = new BubbleSort();
-        int arr[] = {10, 75, 83, 7, 43, 58};
-        B.sort(arr);
+        InsertionSort I = new InsertionSort();
+        int arr[] = {36, 12, 47, 89, 100, 52};
+        I.sort(arr);
         System.out.println("--Sorted Array--");
-        B.print(arr);
+        I.display(arr);
     }
 
 }
