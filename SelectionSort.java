@@ -40,7 +40,7 @@ public class SelectionSort {
 
     public static void main(String[] args) {
         SelectionSort S = new SelectionSort();
-        int arr[]= {10,5,20,50,35,25};
+        int arr[]= {10,5,12,50,85,31};
         S.sort(arr);
         System.out.println("--Sorted Array--");
         S.print(arr);
