@@ -34,7 +34,7 @@ public class BubbleSort {
 
     public static void main(String[] args) {
         BubbleSort B = new BubbleSort();
-        int arr[] = {10, 98, 83, 5, 43, 58};
+        int arr[] = {11, 98, 83, 5, 43, 58};
         B.sort(arr);
         System.out.println("--Sorted Array--");
         B.print(arr);
