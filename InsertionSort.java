@@ -34,7 +34,7 @@ public class InsertionSort {
 
     public static void main(String[] args) {
         InsertionSort I = new InsertionSort();
-        int arr[] = {36, 12, 47, 89, 100, 52};
+        int arr[] = {37, 12, 47, 89, 100, 52};
         I.sort(arr);
         System.out.println("--Sorted Array--");
         I.display(arr);
